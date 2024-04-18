@@ -15,12 +15,16 @@ function displayAdvice(advice) {
     });
     $('#adviceDiv').attr('old-height', newHeight);
     $('.loader').hide();
-    $('#adviceId').text('#117');
+    $('#adviceId').show();
+    setTimeout(() => {
+        $('.dice').fadeIn();
+    }, 400);
 }
 
 async function getAdvice() {
-    $('#adviceId').text('');
+    $('#adviceId').hide();
     $('.loader').show();
+    $('.dice').fadeOut();
     setTimeout(
         () => {
             fetch('https://api.adviceslip.com/advice').then(response => {
@@ -30,11 +34,12 @@ async function getAdvice() {
                 return response.json();
             }).then(data => {
                 displayAdvice(data.slip.advice);
+                $('#adviceId').text(`#${data.slip.id}`);
             }).catch(error => {
                 alert(error);
                 console.error('Fatal Error Occured! ', error);
             });
-        }, 1000
+        }, 500
     )
 }
 

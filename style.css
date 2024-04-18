@@ -1,13 +1,27 @@
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+    background-color: var(--dark-blue);
+}
+
 #mainDiv {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 35rem;
-    height: 265px;
-    border: 1px solid black;
+    height: 300px;
+    border: 1px solid var(--dark-grayish-blue);
+    border-radius: 15px;
     text-align: center;
-    z-index: 0;
+    background-color: var(--dark-grayish-blue);
+    color: var(--light-cyan);
 }
 
 #contentDiv {
@@ -15,12 +29,25 @@
     margin: 5%;
 }
 
+.manrope-custom {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#adviceIdDiv {
+    color: var(--neon-green);
+    letter-spacing: 2px;
+}
+
 #advice {
     font-size: 28px;
+    font-weight: 800;
 }
 
 .divider {
-    margin: 8% 0;
+    margin: 1% 0;
 }
 
 #mobileDivider {
@@ -28,19 +55,37 @@
 }
 
 #diceShell {
-    position: relative;
-    top: 0.2rem;
-    z-index: 1;
+    position: static;
+    margin-top: 2.3rem;
 }
 
 .dice {
-    border: 1px solid black;
+    border: 1px solid var(--neon-green);
     border-radius: 100px;
     padding: 12px;
-    background-color: aqua;
+    background-color: var(--neon-green);
     overflow: visible;
 }
 
 .dice:hover {
     cursor: pointer;
+    box-shadow: 1.5px 1.5px 20px 1.8px var(--neon-green);
+}
+
+/* need to fix main div attr value for mobile screens */
+@media screen and (max-width: 570px) {
+    
+    #mainDiv {
+        width: 100%;
+    }
+
+    #desktopDivider {
+        display: none;
+    }
+
+    #mobileDivider {
+        display: block;
+        margin-bottom: 2%;
+    }
+
 }
