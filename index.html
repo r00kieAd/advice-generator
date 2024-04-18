@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,53 @@
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="main">
-        <button>GET Advice</button>
+    <div id="mainDiv">
+        <div id="contentDiv">
+            <div id="adviceIdDiv">
+                <p>ADVICE&nbsp;&nbsp;<span id="adviceId">#117</span><i class="loader fa-solid fa-comment fa-bounce" style="display: none;"></i></p>
+            </div>
+            <div id="adviceDiv" old-height=64>
+                <p id="advice">"It is easy to sit up and take notice, what's difficult is getting up and taking action."
+                </p>
+            </div>
+            <div id="dividers">
+                <div id="desktopDivider" class="divider"><svg width="444" height="16"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z" />
+                            <g transform="translate(212)" fill="#CEE3E9">
+                                <rect width="6" height="16" rx="3" />
+                                <rect x="14" width="6" height="16" rx="3" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div id="mobileDivider" class="divider"><svg width="295" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <path fill="#4F5D74" d="M0 8h122v1H0zM173 8h122v1H173z" />
+                            <g transform="translate(138)" fill="#CEE3E9">
+                                <rect width="6" height="16" rx="3" />
+                                <rect x="14" width="6" height="16" rx="3" />
+                            </g>
+                        </g>
+                    </svg></div>
+            </div>
+        </div>
+        <div id="diceShell">
+            <div class="diceDiv">
+                <svg class="dice nonloader" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"
+                        fill="#202733" />
+                </svg>
+            </div>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c99c2be3a8.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

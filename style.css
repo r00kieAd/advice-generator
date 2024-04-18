@@ -1,0 +1,46 @@
+#mainDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35rem;
+    height: 265px;
+    border: 1px solid black;
+    text-align: center;
+    z-index: 0;
+}
+
+#contentDiv {
+    position: relative;
+    margin: 5%;
+}
+
+#advice {
+    font-size: 28px;
+}
+
+.divider {
+    margin: 8% 0;
+}
+
+#mobileDivider {
+    display: none;
+}
+
+#diceShell {
+    position: relative;
+    top: 0.2rem;
+    z-index: 1;
+}
+
+.dice {
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 12px;
+    background-color: aqua;
+    overflow: visible;
+}
+
+.dice:hover {
+    cursor: pointer;
+}
