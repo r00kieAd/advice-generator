@@ -53,7 +53,7 @@ The following tools were used in this project:
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE) file.
 
 
-Made with :heart: by <a href="https://github.com/r00kieAd" target="_blank">Adhyatma Dwivedi</a>
+Made with :computer: by <a href="https://github.com/r00kieAd" target="_blank">Adhyatma Dwivedi</a>
 
 &#xa0;
 
