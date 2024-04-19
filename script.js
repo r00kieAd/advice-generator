@@ -9,7 +9,8 @@ function displayAdvice(advice) {
     const newHeight = parseInt($('#adviceDiv').css('height').slice(0, -2));
     const oldHeight = $('#adviceDiv').attr('old-height');
     let mainHeight = '';
-    // console.log(newHeight);
+    alert(oldHeight);
+    alert(newHeight);
     if (newHeight > oldHeight) {
         mainHeight = `${parseInt($('#mainDiv').css('height').slice(0, -2)) + (newHeight - oldHeight)}px`;
     } else if (newHeight < oldHeight) {
