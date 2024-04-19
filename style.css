@@ -42,7 +42,7 @@ body {
 }
 
 #advice {
-    font-size: 28px;
+    font-size: 1.7rem;
     font-weight: 800;
 }
 
@@ -73,10 +73,16 @@ body {
 }
 
 /* need to fix main div attr value for mobile screens */
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 600px) {
     
     #mainDiv {
-        width: 100%;
+        width: 95%;
+        padding-bottom: 12%;
+    }
+
+    #contentDiv {
+        position: relative;
+        margin: 5%;
     }
 
     #desktopDivider {
@@ -84,8 +90,14 @@ body {
     }
 
     #mobileDivider {
+        position: relative;
         display: block;
-        margin-bottom: 2%;
+        margin-bottom: 0;
+    }
+
+    #diceShell {
+        position: static;
+        margin-top: 3.6rem;
     }
 
 }

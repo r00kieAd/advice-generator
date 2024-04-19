@@ -1,8 +1,15 @@
+
+
 function displayAdvice(advice) {
+    if (window.screen.width <= 600 && $('#adviceDiv').attr('old-height') == 114) {
+        $('#adviceDiv').attr('old-height', 190);
+        $('#diceShell').css('margin-top', '0');
+    }
     $('#advice').text(`"${advice}"`);
     const newHeight = parseInt($('#adviceDiv').css('height').slice(0, -2));
     const oldHeight = $('#adviceDiv').attr('old-height');
     let mainHeight = '';
+    // console.log(newHeight);
     if (newHeight > oldHeight) {
         mainHeight = `${parseInt($('#mainDiv').css('height').slice(0, -2)) + (newHeight - oldHeight)}px`;
     } else if (newHeight < oldHeight) {
@@ -33,6 +40,7 @@ async function getAdvice() {
                 }
                 return response.json();
             }).then(data => {
+                $('#page-turn')[0].play();
                 displayAdvice(data.slip.advice);
                 $('#adviceId').text(`#${data.slip.id}`);
             }).catch(error => {
