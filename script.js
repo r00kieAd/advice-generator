@@ -1,16 +1,15 @@
 
 
 function displayAdvice(advice) {
-    if (window.screen.width <= 600 && $('#adviceDiv').attr('old-height') == 114) {
-        $('#adviceDiv').attr('old-height', 190);
+    if (window.screen.width <= 600) {
         $('#diceShell').css('margin-top', '0');
     }
     $('#advice').text(`"${advice}"`);
     const newHeight = parseInt($('#adviceDiv').css('height').slice(0, -2));
     const oldHeight = $('#adviceDiv').attr('old-height');
     let mainHeight = '';
-    alert(oldHeight);
-    alert(newHeight);
+    // alert(oldHeight);
+    // alert(newHeight);
     if (newHeight > oldHeight) {
         mainHeight = `${parseInt($('#mainDiv').css('height').slice(0, -2)) + (newHeight - oldHeight)}px`;
     } else if (newHeight < oldHeight) {

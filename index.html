@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="images/comment-solid.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,7 +17,8 @@
     <div id="mainDiv">
         <div id="contentDiv">
             <div id="adviceIdDiv" class="manrope-custom">
-                <p>ADVICE&nbsp;&nbsp;<span id="adviceId">#117</span><i class="loader fa-solid fa-comment fa-bounce" style="display: none;"></i></p>
+                <p>ADVICE&nbsp;&nbsp;<span id="adviceId">#117</span><i class="loader fa-solid fa-comment fa-bounce"
+                        style="display: none;"></i></p>
             </div>
             <div id="adviceDiv" class="manrope-custom" old-height=114>
                 <p id="advice">"It is easy to sit up and take notice, what's difficult is getting up and taking action."
@@ -58,7 +59,11 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c99c2be3a8.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="script.js">
+        if (window.screen.width <= 600 && $('#adviceDiv').attr('old-height') == 114) {
+            $('#adviceDiv').attr('old-height', 190);
+        }
+    </script>
 </body>
 
 </html>

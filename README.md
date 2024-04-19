@@ -15,7 +15,7 @@
 
   <img alt="License" src="https://img.shields.io/github/license/r00kieAd/advice-generator?color=56BEB8">
 </p>
-<hr> -->
+<hr>
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
